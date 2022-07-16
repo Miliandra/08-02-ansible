@@ -8,7 +8,7 @@
         name: clickhouse-server # Название службы
         state: restarted # Выполнить перезапуск
   tasks: # Список задач для выполнения play
-    - name: Install click # Имя Task'и 
+    - name: Install click # Имя Task'и
       block: # Блок задач
         - name: Get clickhouse distrib # Имя задачи загрузки дистрибутива
           ansible.builtin.get_url: # Вызов модуля url
@@ -33,7 +33,7 @@
     - name: Flush handlers # Принудительное/обязательное выполенние handler
       ansible.builtin.meta: flush_handlers # Вызов модуля meta
     - name: Wait for port 9000 to become open on the host, dont start checking for 25 seconds # Имя задачи для ожидания поднятия порта
-      ansible.builtin.wait_for: # Вызов модуля wait_for 
+      ansible.builtin.wait_for: # Вызов модуля wait_for
         port: 9000 # Порт
         delay: 25 # Задержка
     - name: Create database # Имя задачи
