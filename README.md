@@ -1,6 +1,6 @@
-## Описание Playbook
+# Описание Playbook
   - Дополнительный Playbook с комментариями [playbook](https://github.com/Miliandra/08-02-ansible/tree/main/playbook/site_with_comments.yml)
-#Описание, что делает Playbook:
+## Что делает Playbook:
  - Устанавливаем clickhouse
  - Скачиваем дистрибутив согласно прописанным переменным в `/group_vars/clickhouse/vars.yml`
  - Из-за другого названия пакета, используем блок `rescue` и скачиваем правильный пакет
